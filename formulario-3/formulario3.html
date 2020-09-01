@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <br>
+        <label for="fecha de nac">FECHA DE NACIMIENTO</label>
+        <input type="date" id="fecha de nac" name="f-nac">
+    </form>
+
+    <br><br><br>
+        
+        <h1>Compra de tickets</h1>
+        
+    <form>
+        <br>
+        <label for="datomax">Fecha de compra</label>
+        <input type="date" id="datomax" max="2020-05-20" name="compra-tickets"> <br><!--el 'max' es para aclarar el dato máximo, para limitar el contenido de datos-->
+        
+    </form>
+
+    <br> <br> <br>
+
+    <form>
+        <br>
+        <label for="phone">Ingrese n° de celular:</label>
+        <input type="tel" id="phone" name="telefono" pattern="[0-9]{3}-[0-9]{8}" placeholder="123-xxxxxxxxxx min 8 dígitos" required><!--'pattern' controla el n° que se va a ingresar al telefono, para que el n° sea válido.Para ello utilizo corchetes y especifico que se aceptan valores del 0 hasta el 9, pero sólo vamos a permitir 3 digitos. Esto último se aclara dentro de {}, es decir, la cantidad de dígitos permitidos se aclara dentro de {}.
+        'required´para validar-->
+        <input type="submit" value="enviar"><!--botón de tipo 'submit' para enviar datos-->
+    </form>
+
+    <br> <br><br>
+
+    <form>
+        <label for="cantidad">N° de entradas:</label>
+        <input type="number" id="cantidad" min="1" max="7" name="cant-entradas">
+        <input type="submit" value="Enviar cantidad">
+    </form>
+
+    <br> <br><br>
+
+    <form>
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nom"  size="15">
+            <br><br>
+
+        <label for="pin">PIN</label><br> <!--para que establezca una clave-->
+        <input type="text" id="pin" name="clave" size="6"><!--que el pin admita hasta 6 valores-->
+        <br> <br>
+        <input type="submit" value="ENVIAR">
+    </form>
+
+    <!--NOTA:con el servidor se especificará realmente si los datos ingresados son válidos o no-->
+</body>
+</html>
